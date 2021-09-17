@@ -1,25 +1,21 @@
-// // accueil voulez-vous jouer avec moi ?
+// accueil voulez-vous jouer avec moi ?
 
-// if ( confirm( "Bonjour, bienvenue sur le jeu du shifumi !\n Voulez vous jouer avec moi ?" ) ) {
-//     // code non nécessaire ?
-// } else {
-//    alert("Ooooh, vous pouvez alors fermer cette page \;\)");
-// }
+if ( confirm( "Bonjour, bienvenue sur le jeu du shifumi !\nVoulez-vous jouer avec moi ?" ) ) {
 
-// // demande prénom
-// var prenom = prompt("Super ! Quel est votre prénom ?");
+} else {
+   alert("Ooooh, vous pouvez alors fermer cette page \;\)");
+}
 
-// // récupération prénom --> jouer
+// demande prénom
+var prenom = prompt("Super ! Quel est votre prénom ?");
 
-
-// alert("Enchantée de vous rencontrer " + prenom + " !!!" + "\n Jouons maintenant.");
+alert("Enchantée de vous rencontrer " + prenom + " !!!" + "\n Jouons maintenant.");
 
 
 // choix de l'IA
 
 function choixIA() {
     var choix = Math.random();
-    alert(choix);
     if (choix <= 0.33 ) {
         return "pierre";
     }
@@ -34,28 +30,24 @@ function choixIA() {
 
 // Entrée du choix du joueur
 
-var choixJoueur = prompt("voici les règles :\ Ecrivez en minuscules\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
+var choixJoueur = prompt("voici les règles :\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
+
+// majuscule ou minuscule
+choixJoueur.toLowerCase();
 
 
 // return du choix de l'IA en variable globale
 
 var choixIA = choixIA();
 
-// Apprentissage des règles à l'IA
 
-// var a = choixJoueur("pierre");
-// var b = choixJoueur("ciseaux");
-// var c = choixJoueur("feuille");
-// var d = ("Match nul");
+// quand match nul
 
-// a = a + b || b + a;
-// b = b + c || c + b;
-// c = c + a || a + c;
-// d = a + a || b + b || c + c;
-// choixIA = "pierre";
 if(choixJoueur === choixIA) {
-    alert("match nul");
+    alert("Désolée ! L'ordinateur a choisi " + choixIA + ". Match nul !");
 }
+
+// Quand joueur est gagnant
 
 else if(choixJoueur === "pierre" && choixIA === "ciseaux") {
     alert("L'ordinateur a choisi " + choixIA + ". Vous avez gagné !")
@@ -68,10 +60,10 @@ else if(choixJoueur === "feuille" && choixIA === "pierre") {
 else if(choixJoueur === "ciseaux" && choixIA === "feuille") {
     alert("L'ordinateur a choisi " + choixIA + ". Vous avez gagné !")
 }
+
+
+// Quand joueur perd
+
 else{
     alert("Désolée !!! L'ordinateur a choisi " + choixIA + ". Vous avez perdu !")
 }
-// alert(choixIA + " bonjour"); //vérification de l'affichage
-
-
-// Comparaison choix du joueur
