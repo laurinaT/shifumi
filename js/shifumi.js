@@ -31,6 +31,25 @@ function choixIA() {
     }
 }
 
+// Apprentissage des règles à l'IA
+
+var a = "pierre";
+var b = "ciseaux";
+var c = "feuille";
+var d = "Match nul"
+
+a = a + b || b + a;
+b = b + c || c + b;
+c = c + a || a + c;
+d = a + a || b + b || c + c;
+
+
+
+
+
+
+
+
 // Entrée du choix du joueur
 
 var choixJoueur = prompt("voici les règles :\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
@@ -44,4 +63,6 @@ var choixIA = choixIA();
 
 // Comparaison choix du joueur
 
-var choixJoueur
+function comparaison() {
+
+}
