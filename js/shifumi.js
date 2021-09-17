@@ -12,4 +12,8 @@ var prenom = prompt("Super ! Quel est votre prénom ?");
 // récupération prénom --> jouer
 
 
-alert("Enchantée de vous rencontrer " + prenom + " !!!" + "\n Jouons maintenant");
+alert("Enchantée de vous rencontrer " + prenom + " !!!" + "\n Jouons maintenant.");
+
+// Entrée du choix du joueur
+
+var choixJoueur = prompt("voici les règles :\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
