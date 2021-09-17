@@ -57,19 +57,19 @@ if(choixJoueur === choixIA) {
     alert("match nul");
 }
 
-if else(choixJoueur === "pierre" && choixIA === "ciseaux" {
-    alert("Vous avez gagné !")
+else if(choixJoueur === "pierre" && choixIA === "ciseaux") {
+    alert("L'ordinateur a choisi " + choixIA + ". Vous avez gagné !")
 }
 
-if else(choixJoueur === "feuille" && choixIA === "pierre" {
-    alert("Vous avez gagné !")
+else if(choixJoueur === "feuille" && choixIA === "pierre") {
+    alert("L'ordinateur a choisi " + choixIA + ". Vous avez gagné !")
 }
 
-if else(choixJoueur === "ciseaux" && choixIA === "feuille" {
-    alert("Vous avez gagné !")
+else if(choixJoueur === "ciseaux" && choixIA === "feuille") {
+    alert("L'ordinateur a choisi " + choixIA + ". Vous avez gagné !")
 }
-Else{
-    alert("Vous avez perdu !")
+else{
+    alert("Désolée !!! L'ordinateur a choisi " + choixIA + ". Vous avez perdu !")
 }
 // alert(choixIA + " bonjour"); //vérification de l'affichage
 
