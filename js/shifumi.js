@@ -9,6 +9,22 @@ if ( confirm( "Bonjour, bienvenue sur le jeu du shifumi !\nVoulez-vous jouer ave
 // demande prénom
 var prenom = prompt("Super ! Quel est votre prénom ?");
 
+// longueur prénom
+
+function taillePrenom(prenomenvoye) {
+while (prenomenvoye.length < 2 ) {
+    alert("Désolée, votre prénom est trop court !");
+    prenomenvoye = prompt("Essayez encore une fois ! ");
+}
+while (prenomenvoye.length > 20 ) {
+    alert("Désolée, votre prénom est trop long !");
+    prenomenvoye = prompt("Essayez encore une fois ! ");
+}
+return prenomenvoye;
+}
+
+prenom = taillePrenom(prenom); 
+
 alert("Enchantée de vous rencontrer " + prenom + " !!!" + "\n Jouons maintenant.");
 
 
@@ -33,7 +49,7 @@ function choixIA() {
 var choixJoueur = prompt("voici les règles :\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
 
 // majuscule ou minuscule
-choixJoueur.toLowerCase();
+choixJoueur = choixJoueur.toLowerCase();
 
 
 // return du choix de l'IA en variable globale
