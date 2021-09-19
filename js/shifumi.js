@@ -29,6 +29,16 @@ function choixIA() {
     }
 }
 
+function orthographe() {
+    while (choixJoueur != "pierre" || "feuille" || "ciseaux") {
+    alert("Vous avez fait une erreur de saisie.");
+    choixJoueur = prompt(" Alors pierre, feuille ou ciseaux ? ");
+    }
+    return choixJoueur;
+    }
+}
+
+
  //----------------------------------------------------------------------------------------------------------
    
  
@@ -46,7 +56,7 @@ function choixIA() {
             
             // Entrée du choix du joueur
             var choixJoueur = prompt("voici les règles :\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
-
+            orthographe(choixJoueur); 
             // majuscule ou minuscule
             choixJoueur = choixJoueur.toLowerCase();
 
@@ -90,9 +100,13 @@ function choixIA() {
             if(scoreIA === 3 || scoreJoueur === 3) { // arret de la boucle quand un des joueurs atteind 3
                 if(scoreIA === 3){
                     alert("Vous avez perdu ! \n Score ordinateur : " + scoreIA + "\n Votre score : " + scoreJoueur);
+                    scoreJoueur = 0;
+                    scoreIA = 0;
                 }
                 if(scoreJoueur === 3){
-                        alert("Vous avez gagné ! \n Votre score : " + scoreJoueur + "\n Score ordinateur : " + scoreIA);
+                    alert("Vous avez gagné ! \n Votre score : " + scoreJoueur + "\n Score ordinateur : " + scoreIA);
+                    scoreJoueur = 0;
+                    scoreIA = 0;
                 }
                 if ( !confirm( "Ce jeu vous a plus ? Vous voulez continuer ? ") ) {
                     alert("Ooooh, vous pouvez alors fermer cette page \;\)");
