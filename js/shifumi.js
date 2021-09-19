@@ -29,13 +29,12 @@ function choixIA() {
     }
 }
 
-function orthographe() {
-    while (choixJoueur != "pierre" || "feuille" || "ciseaux") {
+function orthographe(choixJoueur) {
+    while (choixJoueur != "pierre" && choixJoueur != "feuille" && choixJoueur != "ciseaux") {
     alert("Vous avez fait une erreur de saisie.");
     choixJoueur = prompt(" Alors pierre, feuille ou ciseaux ? ");
     }
     return choixJoueur;
-    }
 }
 
 
@@ -56,9 +55,9 @@ function orthographe() {
             
             // Entrée du choix du joueur
             var choixJoueur = prompt("voici les règles :\n La pierre bat les ciseaux\n Les ciseaux battent la feuille \n La feuille bat la pierre \n\n Alors que choisissez vous ? Pierre, feuille ou ciseaux ?");
-            orthographe(choixJoueur); 
             // majuscule ou minuscule
             choixJoueur = choixJoueur.toLowerCase();
+            choixJoueur = orthographe(choixJoueur); 
 
             // return du choix de l'IA en variable globale
             var choixIAFait = choixIA();
